@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ArticleSiteProject.DataAccess\ArticleSiteProject.DataAccess.csproj" />
     <ProjectReference Include="..\ArticleSiteProject.Entities\ArticleSiteProject.Entities.csproj" />
   </ItemGroup>
