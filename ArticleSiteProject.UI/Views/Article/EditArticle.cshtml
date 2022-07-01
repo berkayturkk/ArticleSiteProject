@@ -1,0 +1,32 @@
+﻿@using ArticleSiteProject.Entities.Concrete;
+@model Article
+@{
+    ViewData["Title"] = "EditArticle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Makale Güncelleme Sayfası</h1>
+<br />
+<form method="post">
+    <label>Makale ID</label>
+    <input type="text" asp-for="@Model.ArticleID" class="form-control" />
+    <br />
+    <label>Makale Başlığı</label>
+    <input type="text" asp-for="@Model.ArticleTitle" class="form-control" />
+    <br />
+    <label>Makale İçeriği</label>
+    <input type="text" asp-for="@Model.ArticleContent" class="form-control" />
+    <br />
+    <label>Makale Kategorisi</label>
+    <input type="text" asp-for="@Model.ArticleCategoryName" class="form-control" />
+    <br />
+    <label>Makale Yazarı</label>
+    <input type="text" asp-for="@Model.ArticleWriterName" class="form-control" />
+    <br />
+    <label>Makale Oluşturulma Tarihi</label>
+    <input type="text" asp-for="@Model.ArticleCreateDate" class="form-control" disabled="disabled"/>
+    <br />
+    <br />
+    <button type="submit" class="btn btn-warning">Makale Güncelle</button>
+</form>
+

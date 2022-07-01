@@ -1,0 +1,59 @@
+﻿@using ArticleSiteProject.Entities.Concrete;
+@model List<Article>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<h2>Makale Listesi</h2>
+<br />
+<form asp-action="Index" asp-controller="Article" method="get">
+    <input type="text" name="key" id="key" placeholder="Makale Başlığı" />
+    <input type="submit" value="Ara"  class="btn btn-dark"/>
+
+</form>
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Makale Başlığı</th>
+        <th>Makale İçeriği</th>
+        <th>Makale Kategorisi</th>
+        <th>Makale Yazarı</th>
+        <th>Makale Oluşturulma Tarihi</th>
+        <th>Makale Güncellenme Tarihi</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.ArticleID</th>
+            <td>@item.ArticleTitle</td>
+            <td>@item.ArticleContent.Substring(0,@item.ArticleContent.Substring(0,50).LastIndexOf(" "))...</td>
+            <td>@item.ArticleCategoryName</td>
+            <td>@item.ArticleWriterName</td>
+            <td>@(((DateTime)item.ArticleCreateDate).ToShortDateString())</td>
+            <td>
+                @if(@item.ArticleUpdateDate != null)
+                {
+                   @(((DateTime)item.ArticleUpdateDate).ToShortDateString()) 
+                }
+                else
+                {
+                    @item.ArticleUpdateDate
+                }
+            </td>
+            <td><a href="/Article/EditArticle/@item.ArticleID" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Article/DeleteArticle/@item.ArticleID" class="btn btn-danger">Sil</a></td>
+
+        </tr>
+    }
+</table>
+
+<br />
+<br />
+<a href="/Article/AddArticle/" class="btn btn-success">Yeni Makale Oluştur</a>
