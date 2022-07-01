@@ -18,3 +18,4 @@ namespace ArticleSiteProject.DataAccess.Concrete.Context
         public DbSet<Article> Articles { get; set; }
     }
 }
+

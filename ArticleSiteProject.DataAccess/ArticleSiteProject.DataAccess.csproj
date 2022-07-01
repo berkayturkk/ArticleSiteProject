@@ -18,12 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Concrete\EntityFramework\" />
-    <Folder Include="Repository\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ArticleSiteProject.Entities\ArticleSiteProject.Entities.csproj" />
   </ItemGroup>
 
