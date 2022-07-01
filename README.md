@@ -27,7 +27,7 @@
 
 4) Eklemek istediğiniz bir yorumunuz var mı?
 
-   - Bu projeye devam edip daha geniş vaktim olsaydı projeme neler eklerdimi gerçekleştiricem. Projeme inceleyip vakit ayrıdığınız için teşekkür ederim.
+   - Aslında proje süre daha fazla olsa gelişime açık bir projeydi. Projemi vakit ayırıp incelediğiniz için teşekkür ederim.
    
 <br />
 <br />
