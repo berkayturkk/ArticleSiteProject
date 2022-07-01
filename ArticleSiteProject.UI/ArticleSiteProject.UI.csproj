@@ -17,4 +17,11 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ArticleSiteProject.Business\ArticleSiteProject.Business.csproj" />
+    <ProjectReference Include="..\ArticleSiteProject.DataAccess\ArticleSiteProject.DataAccess.csproj" />
+    <ProjectReference Include="..\ArticleSiteProject.Entities\ArticleSiteProject.Entities.csproj" />
+    <ProjectReference Include="..\ArticleSiteProject.WebApi\ArticleSiteProject.WebApi.csproj" />
+  </ItemGroup>
+
 </Project>
