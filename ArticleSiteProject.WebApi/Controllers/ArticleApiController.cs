@@ -27,6 +27,7 @@ namespace ArticleSiteProject.WebApi.Controllers
         public IActionResult ArticleAdd(Article article)
         {
             using var sqlDbContext = new SqlDbContext();
+            article.ArticleCreateDate = System.DateTime.Now;
             sqlDbContext.Add(article);
             sqlDbContext.SaveChanges();
             return Ok();
