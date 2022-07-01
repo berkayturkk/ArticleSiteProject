@@ -10,5 +10,6 @@ namespace ArticleSiteProject.Business.ValidationRules
 {
     public class ArticleValidator : AbstractValidator<Article>
     {
+      
     }
 }
