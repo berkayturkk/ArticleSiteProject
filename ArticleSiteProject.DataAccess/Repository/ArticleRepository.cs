@@ -39,14 +39,6 @@ namespace ArticleSiteProject.DataAccess.Repository
             }
         }
 
-        public Article GetArticleByCategoryName(string title)
-        {
-            using (var sqlDbContext = new SqlDbContext())
-            {
-                return sqlDbContext.Articles.Find(title);
-            }
-        }
-
         public Article GetArticleById(int id)
         {
             using (var sqlDbContext = new SqlDbContext())
